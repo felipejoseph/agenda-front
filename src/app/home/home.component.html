@@ -1,0 +1,24 @@
+<table class="tabela">
+  <thead class="tabela__cabecalho">
+    <th class="tabela__cabecalho__conteudo">Nome Do cliente</th>
+    <th class="tabela__cabecalho__conteudo">E-mail</th>
+    <th class="tabela__cabecalho__conteudo">Endereço</th>
+    <th class="tabela__cabecalho__conteudo">Bairro</th>
+    <th class="tabela__cabecalho__conteudo">Complemento</th>
+    <th class="tabela__cabecalho__conteudo">Cidade</th>
+  </thead>
+
+    <tbody >
+      <tr *ngFor="let cadastrar of cadastrar">
+        <td class="tabela__conteudo">{{cadastrar?.nomeCliente}}</td>
+        <td class="tabela__conteudo">{{cadastrar?.email}}</td>
+        <td class="tabela__conteudo">{{cadastrar?.endereco}}</td>
+        <td class="tabela__conteudo">{{cadastrar?.bairro}}</td>
+        <td class="tabela__conteudo">{{cadastrar?.complemento}}</td>
+        <td class="tabela__conteudo">{{cadastrar?.cidade}}</td>
+        <div class="botao-wrapper"></div>
+        <button class="botao" (click)="onEdit(cadastrar.id)">Editar</button>
+      </tr>
+
+    </tbody>
+</table>
